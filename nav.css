@@ -1,0 +1,83 @@
+header{
+    width: 100%
+}
+
+.site-nav{
+    display: none;
+}
+
+.open{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 30%;
+    z-index: 999;
+}
+
+nav button{
+    color: #f2f2f2;
+    border: none;
+    text-decoration: none;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.site-nav button {
+    text-align: center;
+}
+
+.site-nav button:first-child {
+    background: #db2d43;
+}
+
+.site-nav button:nth-child(2) {
+    background: #f69314;
+}
+
+.site-nav button:nth-child(3) {
+    background: #a7d129;
+}
+
+.site-nav button:nth-child(4) {
+    background: #1cb3c8;
+}
+
+nav button:hover,
+nav button:focus {
+    outline: none;
+}
+
+.site-nav button:hover,
+.site-nav button:focus{
+    color: black;
+    background-color: #ddd;
+}
+nav .icon {
+    display: block;
+    text-align: left;
+    background: #930077;
+    width: 100%;
+}
+
+
+@media screen and (orientation: landscape){
+    /* If mobile user switches to landscape view while
+    hamburger is activated, counteract open class */
+    .open{
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+    }
+    nav button {
+        flex: 100%;
+    }
+
+    nav .icon{
+        display: none;
+    }
+    .site-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
