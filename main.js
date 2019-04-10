@@ -1,25 +1,27 @@
 function generateContact(){
-    return `
+    return `<div class="contact">
     <p><i class="fas fa-phone"></i> Call us: 817.689.3134</p>
     <p><i class="fas fa-envelope-open-text"></i> Send us a message or schedule a tour here:</p>
     <form>
     <fieldset>
-    <legend>Contact Us</legend>
-    <label for="name">Name</label>
-    <input type="text" name="name">
-    <label for="email">Email</label>
+    <label for="name">Name
+        <input type="text" name="name">
+    </label>
+    <label for="email">Email
     <input type="text" name="email">
+    </label>
     <label for="opt-in">
         <input type="checkbox" name="opt-in">
         I'd like to receive email updates
     </label>
-    <label for="subject">Subject</label>
+    <label for="subject">Subject
     <input type="text" name="subject">
+    </label>
     <label for="message">Message</label>
-    <textarea name="message"></textarea>
+    <textarea name="message" rows="7" cols="30"></textarea>
     </fieldset>
     <button type="submit">Submit</button>
-    </form>`
+    </form></div>`
 }
 
 function generateStory(){

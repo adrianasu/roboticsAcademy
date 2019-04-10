@@ -42,9 +42,7 @@ footer{
 }
 
 .fb-logo {
-    /* width: 50%; */
     width: 30%;
-    /* margin-top: 1em; */
     margin-top: .5em;
 }
 
@@ -66,7 +64,6 @@ footer{
 }
 
 .top-links a{
-    /* width: 20%; */
     width: 30%;
     text-align: center;
     transition: transform .5ms;
@@ -91,6 +88,29 @@ footer{
 .button-look:focus {
     background: #89a4c7;
 }
+form{
+    text-align: center;
+}
+fieldset{
+    border: none;
+}
+
+label{
+    display: block;
+    margin-top: 1.5em;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+
+form button{
+    border: none;
+    background: #74dbef;
+    border-radius: 50px;
+    padding: 1em;
+}
 
 @media screen and (orientation: landscape){
     .fb-logo {
@@ -104,11 +124,18 @@ footer{
     .top-links a {
         width: 20%;
     }
+    .contact {
+        text-align: center;
+    }
  
   
 }
 
 @media screen and (min-width: 700px) {
+    section{
+        width: 70%;
+    }
+ 
     .fb-logo {
         width: 25%;
         margin-top: 0.7em;
