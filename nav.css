@@ -1,25 +1,36 @@
-header{
-    width: 100%
+header {
+    width: 100%;
+    font-size: 1.2em;
+    position: fixed;
+    top: 0;
 }
 
-.site-nav{
+.site-nav {
     display: none;
 }
 
-.open{
+.open {
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 30%;
+    right: 0;
+    width: 40%;
     z-index: 999;
 }
 
-nav button{
-    color: #f2f2f2;
+nav{
+    background: #ffc300;
+    height: 4em;
+    min-width: 200px;
+}
+
+nav button {
+    color: whitesmoke;
     border: none;
     text-decoration: none;
-    padding: 1em;
+    padding: 1em 1.5em;
     cursor: pointer;
+
 }
 
 .site-nav button {
@@ -42,42 +53,104 @@ nav button{
     background: #1cb3c8;
 }
 
-nav button:hover,
-nav button:focus {
+.site-nav button:nth-child(5) {
+    background: #930077;
+}
+
+nav button:hover, nav button:focus {
     outline: none;
 }
 
-.site-nav button:hover,
-.site-nav button:focus{
-    color: black;
-    background-color: #ddd;
+.site-nav button:hover, .site-nav button:focus {
+    color: #fafafa;
+    background-color: black;
 }
+
 nav .icon {
-    display: block;
     text-align: left;
-    background: #930077;
-    width: 100%;
+    background: #ffc300;
+    float: right;
+    font-size: 1.2em;
 }
 
+header .logo {
+    height: 3.8em;
+    margin-top: .2em;
+    margin-left: 2em;
+}
 
-@media screen and (orientation: landscape){
+@media screen and (orientation: landscape) {
+    
+    nav {
+        height: 3.1em;
+        text-align: center;
+    }
+
+    header .logo {
+        height: 2.9em;
+        padding: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    
     /* If mobile user switches to landscape view while
     hamburger is activated, counteract open class */
-    .open{
+    .open {
         flex-direction: row;
         position: relative;
         width: 100%;
     }
     nav button {
         flex: 100%;
+        padding: 1em .9em;
     }
-
-    nav .icon{
+    nav .icon {
         display: none;
     }
-    .site-nav{
+    .site-nav {
+        min-width: 80%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        float: right;
+        overflow: visible;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    nav {
+        height: 4.5em;
+    }
+
+    nav button {
+        font-size: 1.1em;
+        padding: 1.5em 1.3em;
+    }
+
+    header .logo {
+        height: 4.3em;
+        padding: 0;
+        margin-top: .3em;
+    }
+}
+
+@media screen and (min-width: 900px){
+    nav {
+        height: 4.5em;
+    }
+    
+    nav button{    
+        font-size: 1.15em;
+        padding: 1.4em 2em;
+    }
+
+    header .logo {
+        height: 4.3em;
+        padding: 0;
+        margin-top: .2em;
+    }
+    .fb-logo{
+        width: 4%;
     }
 }
